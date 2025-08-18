@@ -1,3 +1,5 @@
+Neil's config on keyball 39.
+
 This keeb created by a group of people who loves keyball.
 
 Special Thanks to: <br>
@@ -6,3 +8,4 @@ Case: *[delock](https://github.com/delock)* <br>
 Firmware: *[Amos698](https://github.com/Amos698)* <br>
 
 <img src="keymap-drawer/keyball39.svg" >
+
