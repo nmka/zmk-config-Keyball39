@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: keyball39}
 layers:
   QWRT:
   - Q
@@ -118,7 +119,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:bluetooth-off$$
   FUN:
   - F1
   - F2
