@@ -1,14 +1,8 @@
 ﻿#define DEFAULT 0
 #define NUM     1
 #define SYM     2
-#define FUN             number_layer {
-            label = "NUM";
-            bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT     &none                         &none         &none         &none         &none         &none
-&kp HOME      &kp PAGE_DOWN &kp PAGE_UP   &kp END       &none                         &none         &none         &trans        &trans        &none
-&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans                                                  &trans
-            >;ne MOUSE   4
+#define FUN     3
+#define MOUSE   4
 #define SCROLL  5
 #define SNIPE   6
 
@@ -132,7 +126,7 @@
             bindings = <
 &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                  &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(LC(F4))
 &kp LA(TAB)  &kp LG(TAB)  &kp LC(LA(TAB))  &kp LA(F4)  &kp LA(SPACE)                  &kp LA(LS(TAB))  &kp LG(A)  &kp LG(D)  &kp LG(L)  &kp LG(M)
-&kp LC(LA(LEFT)) &kp LG(LC(LEFT)) &kp LG(LC(RIGHT)) &kp LC(LA(RIGHT)) &bootloader    &kp LG(LEFT) &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
+&kp LC(LA(LEFT)) &kp LG(LC(LEFT)) &kp LG(LC(RIGHT)) &kp LC(LA(RIGHT)) &bootloader    &kp LG(LEFT) &kp LC(LA(DELETE))     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
 &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans                          &bt BT_CLR
             >;
         };
