@@ -99,7 +99,6 @@
 &kp F9  &kp F10  &kp F11  &kp F12  &none                   &kp C_BRI_UP   &kp C_BRI_DN   &none          &none          &none
 &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                                                     &trans
             >;
-            >;
         };
 
         mouse_layer {
