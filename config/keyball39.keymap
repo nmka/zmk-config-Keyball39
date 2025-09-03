@@ -1,10 +1,7 @@
 ﻿#define DEFAULT 0
 #define NUM     1
-#define SYM     2
-#define FUN     3
-#define MOUSE   4
-#define SCROLL  5
-#define SNIPE   6
+#define FUN     2
+#define MOUSE   3
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -65,69 +62,38 @@
             label = "QWRT";
             bindings = <
 &kp Q      &kp W         &kp E     &kp R         &kp T                                    &kp Y            &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D     &kp F         &kp G                                    &kp H            &kp J  &kp K      &kp L    &kp SEMI
+&mt LCTRL A &mt LALT S   &mt LCMD D &mt LSHFT F  &kp G                                    &kp H            &mt RSHFT J &mt RCMD K &mt RALT L &mt RCTRL SEMI
 &kp Z      &kp X         &kp C     &kp V         &kp B                                    &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LALT  &lt 6 ESCAPE  &lt 4 SPACE  &kp RSHFT  &kp ENTER  &lt 2 BACKSPACE                             &lt 5 TAB
+&kp LCTRL  &kp LEFT_WIN  &kp LALT  &kp ESCAPE   &lt 3 SPACE  &kp TAB    &kp ENTER  &lt 1 BACKSPACE                             &kp DELETE
             >;
-        };
 
         number_layer {
             label = "NUM";
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT     &none                         &none         &none         &none         &none         &none
-&kp HOME      &kp PAGE_DOWN &kp PAGE_UP   &kp END       &none                         &none         &none         &trans        &trans        &none
-&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans                                                  &trans
-            >;
-        };
-
-        symbol_layer {
-            label = "SYM";
-            bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                  &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE        &kp TILDE     &kp QUESTION  &kp COLON     &kp PIPE                     &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SQT
-&kp LT           &kp GT        &kp DQT       &trans        &trans                       &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp NON_US_BACKSLASH
-&trans           &trans        &trans        &trans        &trans       &trans  &trans  &kp DELETE                                                             &trans
+&kp N1           &kp N2        &kp N3        &kp N4        &kp N5                       &kp N6          &kp N7         &kp N8            &kp N9                    &kp N0
+&mt LCTRL GRAVE  &mt LALT SEMI &mt LCMD SQT  &mt LSHFT COMMA &kp PIPE                   &kp MINUS       &mt RSHFT EQUAL &mt RCMD LEFT_BRACKET &mt RALT RIGHT_BRACKET &mt RCTRL DOT
+&trans           &trans        &trans        &trans        &trans                       &trans          &trans         &trans            &trans                &kp NON_US_BACKSLASH
+&trans           &trans        &trans        &trans        &trans        &trans  &trans  &kp DELETE                                                             &trans
             >;
         };
 
         function_layer {
             label = "FUN";
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &kp TAB                 &kp C_MUTE     &kp C_VOL_UP   &kp C_VOL_DN   &kp C_PREV     &kp C_NEXT
+&kp F1  &kp F2   &kp F3   &kp F4   &none                   &kp C_MUTE     &kp C_VOL_UP   &kp C_VOL_DN   &kp C_PREV     &kp C_NEXT
 &kp F5  &kp F6   &kp F7   &kp F8   &none                   &kp CAPS       &kp INSERT     &kp PSCRN      &kp SLCK       &kp C_PP
-&kp F9  &kp F10  &kp F11  &kp F12  &none                   &kp C_BRI_UP   &kp C_BRI_DN   &none          &none          &none
-&trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                                                     &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &none                   &kp C_BRI_UP   &kp C_BRI_DN   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2
+&trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                                                &bt BT_CLR
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8  &kp N9     &kp N0
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &none          &mkp LCLK  &mkp MCLK &mkp RCLK  &none
-&kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &none                   &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
-&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo 3                                        &none
-            >;
-        };
-
-        scroll_layer {
-            label = "SCROLL";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
-            >;
-        };
-
-        snipe_layer {
-            label = "SNIPE";
-            bindings = <
-&kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)                  &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(LC(F4))
-&kp LA(TAB)  &kp LG(TAB)  &kp LC(LA(TAB))  &kp LA(F4)  &kp LA(SPACE)                  &kp LA(LS(TAB))  &kp LG(A)  &kp LG(D)  &kp LG(L)  &kp LG(M)
-&kp LC(LA(LEFT)) &kp LG(LC(LEFT)) &kp LG(LC(RIGHT)) &kp LC(LA(RIGHT)) &bootloader    &kp LG(LEFT) &kp LC(LA(DELETE))     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
-&trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans                          &bt BT_CLR
+&kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7         &kp N8        &kp N9          &kp N0
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &none          &mkp LCLK      &mkp MCLK     &mkp RCLK       &none
+&kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &none                   &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT &none
+&none           &trans          &trans        &trans     &trans  &trans  &trans  &trans                                                     &none
             >;
         };
     };
