@@ -93,8 +93,8 @@
             bindings = <
 &kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7         &kp N8        &kp N9          &kp N0
 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none                   &none          &mkp LCLK      &mkp MCLK     &mkp RCLK       &none
-&kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &none                   &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT &none
-&none           &trans          &trans        &trans     &trans  &trans  &trans  &trans                                                     &none
+&kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &none                   &msc SCRL_LEFT &mp SCRL_DOWN &msc SCRL_UP  &msc SCRL_RIGHT &none
+&none           &trans          &trans        &trans     &trans  &trans  &trans  &mo 2                                                     &none
             >;
         };
     };
